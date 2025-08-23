@@ -1,0 +1,510 @@
+{
+	"user": 1,
+	"datas": [
+		{
+			"code": "ADDRESSES",
+			"name": "ADDRESSES"
+		},
+		{
+			"code": "VIEW_ADDRESSES",
+			"parentCode": "ADDRESSES",
+			"name": "VIEW ADDRESSES"
+		},
+		{
+			"code": "CREATE_ADDRESSES",
+			"parentCode": "ADDRESSES",
+			"name": "CREATE ADDRESSES"
+		},
+		{
+			"code": "UPDATE_ADDRESSES",
+			"parentCode": "ADDRESSES",
+			"name": "UPDATE ADDRESSES"
+		},
+		{
+			"code": "DELETE_ADDRESSES",
+			"parentCode": "ADDRESSES",
+			"name": "DELETE ADDRESSES"
+		},
+		{
+			"code": "ADMIN_STATS",
+			"name": "ADMIN_STATS"
+		},
+		{
+			"code": "VIEW_ADMIN_STATS",
+			"parentCode": "ADMIN_STATS",
+			"name": "VIEW ADMIN_STATS"
+		},
+		{
+			"code": "CREATE_ADMIN_STATS",
+			"parentCode": "ADMIN_STATS",
+			"name": "CREATE ADMIN_STATS"
+		},
+		{
+			"code": "UPDATE_ADMIN_STATS",
+			"parentCode": "ADMIN_STATS",
+			"name": "UPDATE ADMIN_STATS"
+		},
+		{
+			"code": "DELETE_ADMIN_STATS",
+			"parentCode": "ADMIN_STATS",
+			"name": "DELETE ADMIN_STATS"
+		},
+		{
+			"code": "CART_ITEMS",
+			"name": "CART_ITEMS"
+		},
+		{
+			"code": "VIEW_CART_ITEMS",
+			"parentCode": "CART_ITEMS",
+			"name": "VIEW CART_ITEMS"
+		},
+		{
+			"code": "CREATE_CART_ITEMS",
+			"parentCode": "CART_ITEMS",
+			"name": "CREATE CART_ITEMS"
+		},
+		{
+			"code": "UPDATE_CART_ITEMS",
+			"parentCode": "CART_ITEMS",
+			"name": "UPDATE CART_ITEMS"
+		},
+		{
+			"code": "DELETE_CART_ITEMS",
+			"parentCode": "CART_ITEMS",
+			"name": "DELETE CART_ITEMS"
+		},
+		{
+			"code": "CARTS",
+			"name": "CARTS"
+		},
+		{
+			"code": "VIEW_CARTS",
+			"parentCode": "CARTS",
+			"name": "VIEW CARTS"
+		},
+		{
+			"code": "CREATE_CARTS",
+			"parentCode": "CARTS",
+			"name": "CREATE CARTS"
+		},
+		{
+			"code": "UPDATE_CARTS",
+			"parentCode": "CARTS",
+			"name": "UPDATE CARTS"
+		},
+		{
+			"code": "DELETE_CARTS",
+			"parentCode": "CARTS",
+			"name": "DELETE CARTS"
+		},
+		{
+			"code": "CATEGORIES",
+			"name": "CATEGORIES"
+		},
+		{
+			"code": "VIEW_CATEGORIES",
+			"parentCode": "CATEGORIES",
+			"name": "VIEW CATEGORIES"
+		},
+		{
+			"code": "CREATE_CATEGORIES",
+			"parentCode": "CATEGORIES",
+			"name": "CREATE CATEGORIES"
+		},
+		{
+			"code": "UPDATE_CATEGORIES",
+			"parentCode": "CATEGORIES",
+			"name": "UPDATE CATEGORIES"
+		},
+		{
+			"code": "DELETE_CATEGORIES",
+			"parentCode": "CATEGORIES",
+			"name": "DELETE CATEGORIES"
+		},
+		{
+			"code": "CONVERSATIONS",
+			"name": "CONVERSATIONS"
+		},
+		{
+			"code": "VIEW_CONVERSATIONS",
+			"parentCode": "CONVERSATIONS",
+			"name": "VIEW CONVERSATIONS"
+		},
+		{
+			"code": "CREATE_CONVERSATIONS",
+			"parentCode": "CONVERSATIONS",
+			"name": "CREATE CONVERSATIONS"
+		},
+		{
+			"code": "UPDATE_CONVERSATIONS",
+			"parentCode": "CONVERSATIONS",
+			"name": "UPDATE CONVERSATIONS"
+		},
+		{
+			"code": "DELETE_CONVERSATIONS",
+			"parentCode": "CONVERSATIONS",
+			"name": "DELETE CONVERSATIONS"
+		},
+		{
+			"code": "MESSAGES",
+			"name": "MESSAGES"
+		},
+		{
+			"code": "VIEW_MESSAGES",
+			"parentCode": "MESSAGES",
+			"name": "VIEW MESSAGES"
+		},
+		{
+			"code": "CREATE_MESSAGES",
+			"parentCode": "MESSAGES",
+			"name": "CREATE MESSAGES"
+		},
+		{
+			"code": "UPDATE_MESSAGES",
+			"parentCode": "MESSAGES",
+			"name": "UPDATE MESSAGES"
+		},
+		{
+			"code": "DELETE_MESSAGES",
+			"parentCode": "MESSAGES",
+			"name": "DELETE MESSAGES"
+		},
+		{
+			"code": "NOTIFICATIONS",
+			"name": "NOTIFICATIONS"
+		},
+		{
+			"code": "VIEW_NOTIFICATIONS",
+			"parentCode": "NOTIFICATIONS",
+			"name": "VIEW NOTIFICATIONS"
+		},
+		{
+			"code": "CREATE_NOTIFICATIONS",
+			"parentCode": "NOTIFICATIONS",
+			"name": "CREATE NOTIFICATIONS"
+		},
+		{
+			"code": "UPDATE_NOTIFICATIONS",
+			"parentCode": "NOTIFICATIONS",
+			"name": "UPDATE NOTIFICATIONS"
+		},
+		{
+			"code": "DELETE_NOTIFICATIONS",
+			"parentCode": "NOTIFICATIONS",
+			"name": "DELETE NOTIFICATIONS"
+		},
+		{
+			"code": "ORDER_ITEMS",
+			"name": "ORDER_ITEMS"
+		},
+		{
+			"code": "VIEW_ORDER_ITEMS",
+			"parentCode": "ORDER_ITEMS",
+			"name": "VIEW ORDER_ITEMS"
+		},
+		{
+			"code": "CREATE_ORDER_ITEMS",
+			"parentCode": "ORDER_ITEMS",
+			"name": "CREATE ORDER_ITEMS"
+		},
+		{
+			"code": "UPDATE_ORDER_ITEMS",
+			"parentCode": "ORDER_ITEMS",
+			"name": "UPDATE ORDER_ITEMS"
+		},
+		{
+			"code": "DELETE_ORDER_ITEMS",
+			"parentCode": "ORDER_ITEMS",
+			"name": "DELETE ORDER_ITEMS"
+		},
+		{
+			"code": "ORDERS",
+			"name": "ORDERS"
+		},
+		{
+			"code": "VIEW_ORDERS",
+			"parentCode": "ORDERS",
+			"name": "VIEW ORDERS"
+		},
+		{
+			"code": "CREATE_ORDERS",
+			"parentCode": "ORDERS",
+			"name": "CREATE ORDERS"
+		},
+		{
+			"code": "UPDATE_ORDERS",
+			"parentCode": "ORDERS",
+			"name": "UPDATE ORDERS"
+		},
+		{
+			"code": "DELETE_ORDERS",
+			"parentCode": "ORDERS",
+			"name": "DELETE ORDERS"
+		},
+		{
+			"code": "PAYMENTS",
+			"name": "PAYMENTS"
+		},
+		{
+			"code": "VIEW_PAYMENTS",
+			"parentCode": "PAYMENTS",
+			"name": "VIEW PAYMENTS"
+		},
+		{
+			"code": "CREATE_PAYMENTS",
+			"parentCode": "PAYMENTS",
+			"name": "CREATE PAYMENTS"
+		},
+		{
+			"code": "UPDATE_PAYMENTS",
+			"parentCode": "PAYMENTS",
+			"name": "UPDATE PAYMENTS"
+		},
+		{
+			"code": "DELETE_PAYMENTS",
+			"parentCode": "PAYMENTS",
+			"name": "DELETE PAYMENTS"
+		},
+		{
+			"code": "PRODUCT_IMAGES",
+			"name": "PRODUCT_IMAGES"
+		},
+		{
+			"code": "VIEW_PRODUCT_IMAGES",
+			"parentCode": "PRODUCT_IMAGES",
+			"name": "VIEW PRODUCT_IMAGES"
+		},
+		{
+			"code": "CREATE_PRODUCT_IMAGES",
+			"parentCode": "PRODUCT_IMAGES",
+			"name": "CREATE PRODUCT_IMAGES"
+		},
+		{
+			"code": "UPDATE_PRODUCT_IMAGES",
+			"parentCode": "PRODUCT_IMAGES",
+			"name": "UPDATE PRODUCT_IMAGES"
+		},
+		{
+			"code": "DELETE_PRODUCT_IMAGES",
+			"parentCode": "PRODUCT_IMAGES",
+			"name": "DELETE PRODUCT_IMAGES"
+		},
+		{
+			"code": "PRODUCTS",
+			"name": "PRODUCTS"
+		},
+		{
+			"code": "VIEW_PRODUCTS",
+			"parentCode": "PRODUCTS",
+			"name": "VIEW PRODUCTS"
+		},
+		{
+			"code": "CREATE_PRODUCTS",
+			"parentCode": "PRODUCTS",
+			"name": "CREATE PRODUCTS"
+		},
+		{
+			"code": "UPDATE_PRODUCTS",
+			"parentCode": "PRODUCTS",
+			"name": "UPDATE PRODUCTS"
+		},
+		{
+			"code": "DELETE_PRODUCTS",
+			"parentCode": "PRODUCTS",
+			"name": "DELETE PRODUCTS"
+		},
+		{
+			"code": "PROMOTION_PRODUCTS",
+			"name": "PROMOTION_PRODUCTS"
+		},
+		{
+			"code": "VIEW_PROMOTION_PRODUCTS",
+			"parentCode": "PROMOTION_PRODUCTS",
+			"name": "VIEW PROMOTION_PRODUCTS"
+		},
+		{
+			"code": "CREATE_PROMOTION_PRODUCTS",
+			"parentCode": "PROMOTION_PRODUCTS",
+			"name": "CREATE PROMOTION_PRODUCTS"
+		},
+		{
+			"code": "UPDATE_PROMOTION_PRODUCTS",
+			"parentCode": "PROMOTION_PRODUCTS",
+			"name": "UPDATE PROMOTION_PRODUCTS"
+		},
+		{
+			"code": "DELETE_PROMOTION_PRODUCTS",
+			"parentCode": "PROMOTION_PRODUCTS",
+			"name": "DELETE PROMOTION_PRODUCTS"
+		},
+		{
+			"code": "PROMOTION_USAGE",
+			"name": "PROMOTION_USAGE"
+		},
+		{
+			"code": "VIEW_PROMOTION_USAGE",
+			"parentCode": "PROMOTION_USAGE",
+			"name": "VIEW PROMOTION_USAGE"
+		},
+		{
+			"code": "CREATE_PROMOTION_USAGE",
+			"parentCode": "PROMOTION_USAGE",
+			"name": "CREATE PROMOTION_USAGE"
+		},
+		{
+			"code": "UPDATE_PROMOTION_USAGE",
+			"parentCode": "PROMOTION_USAGE",
+			"name": "UPDATE PROMOTION_USAGE"
+		},
+		{
+			"code": "DELETE_PROMOTION_USAGE",
+			"parentCode": "PROMOTION_USAGE",
+			"name": "DELETE PROMOTION_USAGE"
+		},
+		{
+			"code": "PROMOTIONS",
+			"name": "PROMOTIONS"
+		},
+		{
+			"code": "VIEW_PROMOTIONS",
+			"parentCode": "PROMOTIONS",
+			"name": "VIEW PROMOTIONS"
+		},
+		{
+			"code": "CREATE_PROMOTIONS",
+			"parentCode": "PROMOTIONS",
+			"name": "CREATE PROMOTIONS"
+		},
+		{
+			"code": "UPDATE_PROMOTIONS",
+			"parentCode": "PROMOTIONS",
+			"name": "UPDATE PROMOTIONS"
+		},
+		{
+			"code": "DELETE_PROMOTIONS",
+			"parentCode": "PROMOTIONS",
+			"name": "DELETE PROMOTIONS"
+		},
+		{
+			"code": "REVIEWS",
+			"name": "REVIEWS"
+		},
+		{
+			"code": "VIEW_REVIEWS",
+			"parentCode": "REVIEWS",
+			"name": "VIEW REVIEWS"
+		},
+		{
+			"code": "CREATE_REVIEWS",
+			"parentCode": "REVIEWS",
+			"name": "CREATE REVIEWS"
+		},
+		{
+			"code": "UPDATE_REVIEWS",
+			"parentCode": "REVIEWS",
+			"name": "UPDATE REVIEWS"
+		},
+		{
+			"code": "DELETE_REVIEWS",
+			"parentCode": "REVIEWS",
+			"name": "DELETE REVIEWS"
+		},
+		{
+			"code": "SELLER_STATS",
+			"name": "SELLER_STATS"
+		},
+		{
+			"code": "VIEW_SELLER_STATS",
+			"parentCode": "SELLER_STATS",
+			"name": "VIEW SELLER_STATS"
+		},
+		{
+			"code": "CREATE_SELLER_STATS",
+			"parentCode": "SELLER_STATS",
+			"name": "CREATE SELLER_STATS"
+		},
+		{
+			"code": "UPDATE_SELLER_STATS",
+			"parentCode": "SELLER_STATS",
+			"name": "UPDATE SELLER_STATS"
+		},
+		{
+			"code": "DELETE_SELLER_STATS",
+			"parentCode": "SELLER_STATS",
+			"name": "DELETE SELLER_STATS"
+		},
+		{
+			"code": "SESSIONS",
+			"name": "SESSIONS"
+		},
+		{
+			"code": "VIEW_SESSIONS",
+			"parentCode": "SESSIONS",
+			"name": "VIEW SESSIONS"
+		},
+		{
+			"code": "CREATE_SESSIONS",
+			"parentCode": "SESSIONS",
+			"name": "CREATE SESSIONS"
+		},
+		{
+			"code": "UPDATE_SESSIONS",
+			"parentCode": "SESSIONS",
+			"name": "UPDATE SESSIONS"
+		},
+		{
+			"code": "DELETE_SESSIONS",
+			"parentCode": "SESSIONS",
+			"name": "DELETE SESSIONS"
+		},
+		{
+			"code": "STOCK_HISTORY",
+			"name": "STOCK_HISTORY"
+		},
+		{
+			"code": "VIEW_STOCK_HISTORY",
+			"parentCode": "STOCK_HISTORY",
+			"name": "VIEW STOCK_HISTORY"
+		},
+		{
+			"code": "CREATE_STOCK_HISTORY",
+			"parentCode": "STOCK_HISTORY",
+			"name": "CREATE STOCK_HISTORY"
+		},
+		{
+			"code": "UPDATE_STOCK_HISTORY",
+			"parentCode": "STOCK_HISTORY",
+			"name": "UPDATE STOCK_HISTORY"
+		},
+		{
+			"code": "DELETE_STOCK_HISTORY",
+			"parentCode": "STOCK_HISTORY",
+			"name": "DELETE STOCK_HISTORY"
+		},
+		{
+			"code": "USERS",
+			"name": "USERS"
+		},
+		{
+			"code": "VIEW_USERS",
+			"parentCode": "USERS",
+			"name": "VIEW USERS"
+		},
+		{
+			"code": "CREATE_USERS",
+			"parentCode": "USERS",
+			"name": "CREATE USERS"
+		},
+		{
+			"code": "UPDATE_USERS",
+			"parentCode": "USERS",
+			"name": "UPDATE USERS"
+		},
+		{
+			"code": "DELETE_USERS",
+			"parentCode": "USERS",
+			"name": "DELETE USERS"
+		}
+
+	]
+}

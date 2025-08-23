@@ -1,0 +1,2384 @@
+
+{
+
+    "info": {
+        "_postman_id": "df67b7b8-9986-4f5f-836e-e0af58c8e968",
+        "name": "com_wdyapplications_e_commerce_api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+		{
+			"name": "addresses",
+			"item": [
+                {
+					"name": "addresses.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"userId\": \"\", \t\t\t\"label\": \"\", \t\t\t\"streetAddress\": \"\", \t\t\t\"city\": \"\", \t\t\t\"state\": \"\", \t\t\t\"postalCode\": \"\", \t\t\t\"country\": \"\", \t\t\t\"isDefault\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/addresses/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"addresses",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "addresses.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"label\": \"\", \t\t\t\"streetAddress\": \"\", \t\t\t\"city\": \"\", \t\t\t\"state\": \"\", \t\t\t\"postalCode\": \"\", \t\t\t\"country\": \"\", \t\t\t\"isDefault\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/addresses/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "addresses",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "addresses.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/addresses/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "addresses",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "addresses.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"userId\": \"\", \t\t\"label\": \"\", \t\t\"streetAddress\": \"\", \t\t\"city\": \"\", \t\t\"state\": \"\", \t\t\"postalCode\": \"\", \t\t\"country\": \"\", \t\t\"isDefault\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/addresses/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "addresses",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "adminStats",
+			"item": [
+                {
+					"name": "adminStats.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"statsDate\": \"\", \t\t\t\"totalRevenue\": \"\", \t\t\t\"totalOrders\": \"\", \t\t\t\"activeUsers\": \"\", \t\t\t\"newUsers\": \"\", \t\t\t\"totalProducts\": \"\", \t\t\t\"outOfStockProducts\": \"\", \t\t\t\"calculatedAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/adminStats/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"adminStats",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "adminStats.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"statsDate\": \"\", \t\t\t\"totalRevenue\": \"\", \t\t\t\"totalOrders\": \"\", \t\t\t\"activeUsers\": \"\", \t\t\t\"newUsers\": \"\", \t\t\t\"totalProducts\": \"\", \t\t\t\"outOfStockProducts\": \"\", \t\t\t\"calculatedAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/adminStats/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "adminStats",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "adminStats.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/adminStats/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "adminStats",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "adminStats.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"statsDate\": \"\", \t\t\"totalRevenue\": \"\", \t\t\"totalOrders\": \"\", \t\t\"activeUsers\": \"\", \t\t\"newUsers\": \"\", \t\t\"totalProducts\": \"\", \t\t\"outOfStockProducts\": \"\", \t\t\"calculatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/adminStats/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "adminStats",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "cartItems",
+			"item": [
+                {
+					"name": "cartItems.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"cartId\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"quantity\": \"\", \t\t\t\"unitPrice\": \"\", \t\t\t\"addedAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/cartItems/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"cartItems",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "cartItems.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"cartId\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"quantity\": \"\", \t\t\t\"unitPrice\": \"\", \t\t\t\"addedAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/cartItems/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "cartItems",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "cartItems.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/cartItems/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "cartItems",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "cartItems.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"cartId\": \"\", \t\t\"productId\": \"\", \t\t\"quantity\": \"\", \t\t\"unitPrice\": \"\", \t\t\"addedAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/cartItems/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "cartItems",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "carts",
+			"item": [
+                {
+					"name": "carts.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"userId\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/carts/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"carts",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "carts.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"userId\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/carts/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "carts",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "carts.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/carts/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "carts",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "carts.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"userId\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/carts/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "carts",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+                {
+					"name": "categories.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"name\": \"\", \t\t\t\"description\": \"\", \t\t\t\"iconUrl\": \"\", \t\t\t\"parentId\": \"\", \t\t\t\"isActive\": \"\", \t\t\t\"sortOrder\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/categories/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"categories",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "categories.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"name\": \"\", \t\t\t\"description\": \"\", \t\t\t\"iconUrl\": \"\", \t\t\t\"parentId\": \"\", \t\t\t\"isActive\": \"\", \t\t\t\"sortOrder\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/categories/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "categories",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "categories.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/categories/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "categories",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "categories.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"name\": \"\", \t\t\"description\": \"\", \t\t\"iconUrl\": \"\", \t\t\"parentId\": \"\", \t\t\"isActive\": \"\", \t\t\"sortOrder\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/categories/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "categories",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "conversations",
+			"item": [
+                {
+					"name": "conversations.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"clientId\": \"\", \t\t\t\"sellerId\": \"\", \t\t\t\"lastMessageAt\": \"\", \t\t\t\"isActive\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/conversations/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"conversations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "conversations.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"clientId\": \"\", \t\t\t\"sellerId\": \"\", \t\t\t\"lastMessageAt\": \"\", \t\t\t\"isActive\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/conversations/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "conversations",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "conversations.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/conversations/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "conversations",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "conversations.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"clientId\": \"\", \t\t\"sellerId\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\", \t\t\"lastMessageAt\": \"\", \t\t\"isActive\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/conversations/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "conversations",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "messages",
+			"item": [
+                {
+					"name": "messages.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"conversationId\": \"\", \t\t\t\"senderId\": \"\", \t\t\t\"content\": \"\", \t\t\t\"type\": \"\", \t\t\t\"attachmentUrl\": \"\", \t\t\t\"isRead\": \"\", \t\t\t\"readAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/messages/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"messages",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "messages.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"conversationId\": \"\", \t\t\t\"senderId\": \"\", \t\t\t\"content\": \"\", \t\t\t\"type\": \"\", \t\t\t\"attachmentUrl\": \"\", \t\t\t\"isRead\": \"\", \t\t\t\"readAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/messages/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "messages",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "messages.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/messages/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "messages",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "messages.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"conversationId\": \"\", \t\t\"senderId\": \"\", \t\t\"content\": \"\", \t\t\"type\": \"\", \t\t\"attachmentUrl\": \"\", \t\t\"isRead\": \"\", \t\t\"createdAt\": \"\", \t\t\"readAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/messages/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "messages",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+                {
+					"name": "notifications.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"userId\": \"\", \t\t\t\"title\": \"\", \t\t\t\"message\": \"\", \t\t\t\"type\": \"\", \t\t\t\"referenceId\": \"\", \t\t\t\"isRead\": \"\", \t\t\t\"isPushSent\": \"\", \t\t\t\"readAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/notifications/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"notifications",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "notifications.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"title\": \"\", \t\t\t\"message\": \"\", \t\t\t\"type\": \"\", \t\t\t\"referenceId\": \"\", \t\t\t\"isRead\": \"\", \t\t\t\"isPushSent\": \"\", \t\t\t\"readAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/notifications/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "notifications",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "notifications.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/notifications/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "notifications",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "notifications.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"userId\": \"\", \t\t\"title\": \"\", \t\t\"message\": \"\", \t\t\"type\": \"\", \t\t\"referenceId\": \"\", \t\t\"isRead\": \"\", \t\t\"isPushSent\": \"\", \t\t\"createdAt\": \"\", \t\t\"readAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/notifications/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "notifications",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "orderItems",
+			"item": [
+                {
+					"name": "orderItems.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"orderId\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"sellerId\": \"\", \t\t\t\"quantity\": \"\", \t\t\t\"unitPrice\": \"\", \t\t\t\"totalPrice\": \"\", \t\t\t\"status\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/orderItems/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"orderItems",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "orderItems.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"orderId\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"sellerId\": \"\", \t\t\t\"quantity\": \"\", \t\t\t\"unitPrice\": \"\", \t\t\t\"totalPrice\": \"\", \t\t\t\"status\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/orderItems/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "orderItems",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "orderItems.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/orderItems/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "orderItems",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "orderItems.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"orderId\": \"\", \t\t\"productId\": \"\", \t\t\"sellerId\": \"\", \t\t\"quantity\": \"\", \t\t\"unitPrice\": \"\", \t\t\"totalPrice\": \"\", \t\t\"status\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/orderItems/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "orderItems",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+                {
+					"name": "orders.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"orderNumber\": \"\", \t\t\t\"customerId\": \"\", \t\t\t\"status\": \"\", \t\t\t\"subtotal\": \"\", \t\t\t\"taxAmount\": \"\", \t\t\t\"shippingCost\": \"\", \t\t\t\"discountAmount\": \"\", \t\t\t\"totalAmount\": \"\", \t\t\t\"shippingAddress\": \"\", \t\t\t\"billingAddress\": \"\", \t\t\t\"paymentMethod\": \"\", \t\t\t\"paymentStatus\": \"\", \t\t\t\"trackingNumber\": \"\", \t\t\t\"shippedAt\": \"\", \t\t\t\"deliveredAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/orders/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "orders.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"orderNumber\": \"\", \t\t\t\"customerId\": \"\", \t\t\t\"status\": \"\", \t\t\t\"subtotal\": \"\", \t\t\t\"taxAmount\": \"\", \t\t\t\"shippingCost\": \"\", \t\t\t\"discountAmount\": \"\", \t\t\t\"totalAmount\": \"\", \t\t\t\"shippingAddress\": \"\", \t\t\t\"billingAddress\": \"\", \t\t\t\"paymentMethod\": \"\", \t\t\t\"paymentStatus\": \"\", \t\t\t\"trackingNumber\": \"\", \t\t\t\"shippedAt\": \"\", \t\t\t\"deliveredAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/orders/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "orders",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "orders.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/orders/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "orders",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "orders.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"orderNumber\": \"\", \t\t\"customerId\": \"\", \t\t\"status\": \"\", \t\t\"subtotal\": \"\", \t\t\"taxAmount\": \"\", \t\t\"shippingCost\": \"\", \t\t\"discountAmount\": \"\", \t\t\"totalAmount\": \"\", \t\t\"shippingAddress\": \"\", \t\t\"billingAddress\": \"\", \t\t\"paymentMethod\": \"\", \t\t\"paymentStatus\": \"\", \t\t\"trackingNumber\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\", \t\t\"shippedAt\": \"\", \t\t\"deliveredAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/orders/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "orders",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "payments",
+			"item": [
+                {
+					"name": "payments.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"orderId\": \"\", \t\t\t\"paymentMethod\": \"\", \t\t\t\"amount\": \"\", \t\t\t\"currency\": \"\", \t\t\t\"status\": \"\", \t\t\t\"transactionId\": \"\", \t\t\t\"gatewayResponse\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/payments/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"payments",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "payments.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"orderId\": \"\", \t\t\t\"paymentMethod\": \"\", \t\t\t\"amount\": \"\", \t\t\t\"currency\": \"\", \t\t\t\"status\": \"\", \t\t\t\"transactionId\": \"\", \t\t\t\"gatewayResponse\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/payments/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "payments",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "payments.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/payments/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "payments",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "payments.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"orderId\": \"\", \t\t\"paymentMethod\": \"\", \t\t\"amount\": \"\", \t\t\"currency\": \"\", \t\t\"status\": \"\", \t\t\"transactionId\": \"\", \t\t\"gatewayResponse\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/payments/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "payments",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "productImages",
+			"item": [
+                {
+					"name": "productImages.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"productId\": \"\", \t\t\t\"imageUrl\": \"\", \t\t\t\"altText\": \"\", \t\t\t\"isPrimary\": \"\", \t\t\t\"sortOrder\": \"\", \t\t\t\"uploadedAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/productImages/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"productImages",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "productImages.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"imageUrl\": \"\", \t\t\t\"altText\": \"\", \t\t\t\"isPrimary\": \"\", \t\t\t\"sortOrder\": \"\", \t\t\t\"uploadedAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/productImages/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "productImages",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "productImages.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/productImages/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "productImages",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "productImages.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"productId\": \"\", \t\t\"imageUrl\": \"\", \t\t\"altText\": \"\", \t\t\"isPrimary\": \"\", \t\t\"sortOrder\": \"\", \t\t\"uploadedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/productImages/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "productImages",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+                {
+					"name": "products.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"sellerId\": \"\", \t\t\t\"categoryId\": \"\", \t\t\t\"name\": \"\", \t\t\t\"description\": \"\", \t\t\t\"price\": \"\", \t\t\t\"promoPrice\": \"\", \t\t\t\"stockQuantity\": \"\", \t\t\t\"minStockAlert\": \"\", \t\t\t\"status\": \"\", \t\t\t\"averageRating\": \"\", \t\t\t\"totalReviews\": \"\", \t\t\t\"totalSales\": \"\", \t\t\t\"isFeatured\": \"\", \t\t\t\"isRecommended\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/products/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "products.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"sellerId\": \"\", \t\t\t\"categoryId\": \"\", \t\t\t\"name\": \"\", \t\t\t\"description\": \"\", \t\t\t\"price\": \"\", \t\t\t\"promoPrice\": \"\", \t\t\t\"stockQuantity\": \"\", \t\t\t\"minStockAlert\": \"\", \t\t\t\"status\": \"\", \t\t\t\"averageRating\": \"\", \t\t\t\"totalReviews\": \"\", \t\t\t\"totalSales\": \"\", \t\t\t\"isFeatured\": \"\", \t\t\t\"isRecommended\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/products/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "products",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "products.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/products/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "products",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "products.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"sellerId\": \"\", \t\t\"categoryId\": \"\", \t\t\"name\": \"\", \t\t\"description\": \"\", \t\t\"price\": \"\", \t\t\"promoPrice\": \"\", \t\t\"stockQuantity\": \"\", \t\t\"minStockAlert\": \"\", \t\t\"status\": \"\", \t\t\"averageRating\": \"\", \t\t\"totalReviews\": \"\", \t\t\"totalSales\": \"\", \t\t\"isFeatured\": \"\", \t\t\"isRecommended\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/products/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "products",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "promotionProducts",
+			"item": [
+                {
+					"name": "promotionProducts.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"promotionId\": \"\", \t\t\t\"productId\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/promotionProducts/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"promotionProducts",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "promotionProducts.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"promotionId\": \"\", \t\t\t\"productId\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/promotionProducts/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "promotionProducts",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "promotionProducts.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/promotionProducts/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "promotionProducts",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "promotionProducts.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"promotionId\": \"\", \t\t\"productId\": \"\", \t\t\"createdAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/promotionProducts/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "promotionProducts",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "promotionUsage",
+			"item": [
+                {
+					"name": "promotionUsage.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"promotionId\": \"\", \t\t\t\"orderId\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"discountAmount\": \"\", \t\t\t\"usedAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/promotionUsage/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"promotionUsage",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "promotionUsage.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"promotionId\": \"\", \t\t\t\"orderId\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"discountAmount\": \"\", \t\t\t\"usedAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/promotionUsage/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "promotionUsage",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "promotionUsage.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/promotionUsage/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "promotionUsage",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "promotionUsage.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"promotionId\": \"\", \t\t\"orderId\": \"\", \t\t\"userId\": \"\", \t\t\"discountAmount\": \"\", \t\t\"usedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/promotionUsage/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "promotionUsage",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "promotions",
+			"item": [
+                {
+					"name": "promotions.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"code\": \"\", \t\t\t\"name\": \"\", \t\t\t\"description\": \"\", \t\t\t\"type\": \"\", \t\t\t\"value\": \"\", \t\t\t\"minOrderAmount\": \"\", \t\t\t\"maxUses\": \"\", \t\t\t\"usedCount\": \"\", \t\t\t\"startDate\": \"\", \t\t\t\"endDate\": \"\", \t\t\t\"isActive\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/promotions/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"promotions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "promotions.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"code\": \"\", \t\t\t\"name\": \"\", \t\t\t\"description\": \"\", \t\t\t\"type\": \"\", \t\t\t\"value\": \"\", \t\t\t\"minOrderAmount\": \"\", \t\t\t\"maxUses\": \"\", \t\t\t\"usedCount\": \"\", \t\t\t\"startDate\": \"\", \t\t\t\"endDate\": \"\", \t\t\t\"isActive\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/promotions/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "promotions",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "promotions.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/promotions/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "promotions",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "promotions.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"code\": \"\", \t\t\"name\": \"\", \t\t\"description\": \"\", \t\t\"type\": \"\", \t\t\"value\": \"\", \t\t\"minOrderAmount\": \"\", \t\t\"maxUses\": \"\", \t\t\"usedCount\": \"\", \t\t\"startDate\": \"\", \t\t\"endDate\": \"\", \t\t\"isActive\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/promotions/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "promotions",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+                {
+					"name": "reviews.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"productId\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"rating\": \"\", \t\t\t\"comment\": \"\", \t\t\t\"isVerifiedPurchase\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/reviews/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"reviews",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "reviews.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"rating\": \"\", \t\t\t\"comment\": \"\", \t\t\t\"isVerifiedPurchase\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/reviews/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "reviews",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "reviews.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/reviews/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "reviews",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "reviews.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"productId\": \"\", \t\t\"userId\": \"\", \t\t\"rating\": \"\", \t\t\"comment\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\", \t\t\"isVerifiedPurchase\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/reviews/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "reviews",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "sellerStats",
+			"item": [
+                {
+					"name": "sellerStats.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"sellerId\": \"\", \t\t\t\"year\": \"\", \t\t\t\"month\": \"\", \t\t\t\"totalRevenue\": \"\", \t\t\t\"totalOrders\": \"\", \t\t\t\"totalProductsSold\": \"\", \t\t\t\"averageRating\": \"\", \t\t\t\"calculatedAt\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/sellerStats/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"sellerStats",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "sellerStats.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"sellerId\": \"\", \t\t\t\"year\": \"\", \t\t\t\"month\": \"\", \t\t\t\"totalRevenue\": \"\", \t\t\t\"totalOrders\": \"\", \t\t\t\"totalProductsSold\": \"\", \t\t\t\"averageRating\": \"\", \t\t\t\"calculatedAt\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/sellerStats/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "sellerStats",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "sellerStats.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/sellerStats/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "sellerStats",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "sellerStats.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"sellerId\": \"\", \t\t\"year\": \"\", \t\t\"month\": \"\", \t\t\"totalRevenue\": \"\", \t\t\"totalOrders\": \"\", \t\t\"totalProductsSold\": \"\", \t\t\"averageRating\": \"\", \t\t\"calculatedAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/sellerStats/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "sellerStats",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "sessions",
+			"item": [
+                {
+					"name": "sessions.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"userId\": \"\", \t\t\t\"token\": \"\", \t\t\t\"expiresAt\": \"\", \t\t\t\"deviceInfo\": \"\", \t\t\t\"ipAddress\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/sessions/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"sessions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "sessions.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"userId\": \"\", \t\t\t\"token\": \"\", \t\t\t\"expiresAt\": \"\", \t\t\t\"deviceInfo\": \"\", \t\t\t\"ipAddress\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/sessions/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "sessions",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "sessions.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/sessions/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "sessions",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "sessions.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"userId\": \"\", \t\t\"token\": \"\", \t\t\"expiresAt\": \"\", \t\t\"createdAt\": \"\", \t\t\"deviceInfo\": \"\", \t\t\"ipAddress\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/sessions/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "sessions",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "stockHistory",
+			"item": [
+                {
+					"name": "stockHistory.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"productId\": \"\", \t\t\t\"oldQuantity\": \"\", \t\t\t\"newQuantity\": \"\", \t\t\t\"changeQuantity\": \"\", \t\t\t\"reason\": \"\", \t\t\t\"referenceId\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/stockHistory/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"stockHistory",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "stockHistory.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"productId\": \"\", \t\t\t\"oldQuantity\": \"\", \t\t\t\"newQuantity\": \"\", \t\t\t\"changeQuantity\": \"\", \t\t\t\"reason\": \"\", \t\t\t\"referenceId\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/stockHistory/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "stockHistory",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "stockHistory.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/stockHistory/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "stockHistory",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "stockHistory.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"productId\": \"\", \t\t\"oldQuantity\": \"\", \t\t\"newQuantity\": \"\", \t\t\"changeQuantity\": \"\", \t\t\"reason\": \"\", \t\t\"referenceId\": \"\", \t\t\"createdAt\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/stockHistory/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "stockHistory",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+                {
+					"name": "users.create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"email\": \"\", \t\t\t\"passwordHash\": \"\", \t\t\t\"firstName\": \"\", \t\t\t\"lastName\": \"\", \t\t\t\"phone\": \"\", \t\t\t\"avatarUrl\": \"\", \t\t\t\"role\": \"\", \t\t\t\"lastLogin\": \"\", \t\t\t\"isActive\": \"\", \t\t\t\"resetToken\": \"\", \t\t\t\"resetTokenExpires\": \"\" \t\t}  \t]   }"
+						},
+						"url": {
+							"raw": "{{appUrl}}/users/create",
+							"host": [
+								"{{appUrl}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+                    "name": "users.update",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\", \t\t\t\"email\": \"\", \t\t\t\"passwordHash\": \"\", \t\t\t\"firstName\": \"\", \t\t\t\"lastName\": \"\", \t\t\t\"phone\": \"\", \t\t\t\"avatarUrl\": \"\", \t\t\t\"role\": \"\", \t\t\t\"lastLogin\": \"\", \t\t\t\"isActive\": \"\", \t\t\t\"resetToken\": \"\", \t\t\t\"resetTokenExpires\": \"\" \t\t}  \t]   }"
+                        },
+                        "url": {
+                            "raw": "{{appUrl}}/users/update",
+                            "host": [
+                                "{{appUrl}}"
+                            ],
+                            "path": [
+                                "users",
+                                "update"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                     "name": "users.delete",
+                     "request": {
+                         "method": "POST",
+                         "header": [
+                             {
+                                 "key": "Content-Type",
+                                 "value": "application/json"
+                             }
+                         ],
+                         "body": {
+                             "mode": "raw",
+                            "raw": "{ \t\"user\":\"1\", \t\"datas\":[ \t\t{   \t\t\t\"id\": \"\" \t\t}  \t]   }"
+                         },
+                         "url": {
+                             "raw": "{{appUrl}}/users/delete",
+                             "host": [
+                                 "{{appUrl}}"
+                             ],
+                             "path": [
+                                 "users",
+                                 "delete"
+                             ]
+                         }
+                     },
+                     "response": []
+                 },
+                 {
+                   "name": "users.getByCriteria",
+                   "request": {
+                       "method": "POST",
+                       "header": [
+                           {
+                               "key": "Content-Type",
+                               "value": "application/json"
+                           }
+                       ],
+                       "body": {
+                           "mode": "raw",
+			            "raw": "{ \t\"user\":\"1\", \t\"isSimpleLoading\":false, \t\"data\":{   \t\t\"id\": \"\", \t\t\"email\": \"\", \t\t\"passwordHash\": \"\", \t\t\"firstName\": \"\", \t\t\"lastName\": \"\", \t\t\"phone\": \"\", \t\t\"avatarUrl\": \"\", \t\t\"role\": \"\", \t\t\"createdAt\": \"\", \t\t\"updatedAt\": \"\", \t\t\"lastLogin\": \"\", \t\t\"isActive\": \"\", \t\t\"resetToken\": \"\", \t\t\"resetTokenExpires\": \"\" \t}   }"
+},
+                       "url": {
+                           "raw": "{{appUrl}}/users/getByCriteria",
+                           "host": [
+                               "{{appUrl}}"
+                           ],
+                           "path": [
+                               "users",
+                               "getByCriteria"
+                           ]
+                       }
+                   },
+                   "response": []
+               }
+			]
+		}
+    ]
+}

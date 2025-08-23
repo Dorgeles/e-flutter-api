@@ -1,0 +1,32 @@
+
+/*
+ * Created on $today.date ( Time $today.time )
+ * Generator tool : $generator.name ( version $generator.version )
+ * Copyright 2018 Geo. All Rights Reserved.
+ */
+
+package ${target.javaPackageFromFolder(${SRC})};
+
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+/**
+ * Params Utils
+ *
+ * @author Dorgeddy
+ */
+
+//@Component
+//@Getter
+//import lombok.NoArgsConstructor;
+@NoArgsConstructor
+//@ToString
+public class ParamsUtils {
+
+
+}
