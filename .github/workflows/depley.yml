@@ -1,0 +1,88 @@
+name: Deploy WAR based on Tag
+
+on:
+  push:
+    tags:
+      - '*-*'   # Matches dev-0.0.1, prod-1.0.0, etc.
+
+env:
+  MAVEN_OPTS: "-Dhttps.protocols=TLSv1.2 -Dmaven.repo.local=${{ github.workspace }}/.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Extract profile from tag
+        id: extract_profile
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          PROFILE=${TAG_NAME%%-*}
+          echo "TAG_NAME=$TAG_NAME"
+          echo "PROFILE=$PROFILE"
+          echo "profile=$PROFILE" >> $GITHUB_OUTPUT
+          
+          # Set environment based on tag prefix (similar to GitLab CI logic)
+          if [[ "$TAG_NAME" =~ ^dev-.*$ ]]; then
+          export ENV="dev,development"
+          echo "ENV=dev,development" >> $GITHUB_ENV
+          elif [[ "$TAG_NAME" =~ ^stg-.*$ ]]; then
+          export ENV="staging"
+          echo "ENV=staging" >> $GITHUB_ENV
+          elif [[ "$TAG_NAME" =~ ^prod-.*$ ]]; then
+          export ENV="prod,production"
+          echo "ENV=prod,production" >> $GITHUB_ENV
+          fi
+          echo "Environment set to: $ENV"
+
+      - name: Set up Java 24
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '24'
+
+      - name: Build WAR with profile
+        run: |
+          ./mvnw ${MAVEN_CLI_OPTS} clean install -Dspring.profiles.active=${{ steps.extract_profile.outputs.profile }} -DskipTests
+          # Rename the WAR file to a consistent name
+          mv target/*.war target/e-flutter-api-${{ steps.extract_profile.outputs.profile }}.war
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: e-flutter-api-${{ steps.extract_profile.outputs.profile }}
+          path: "target/e-flutter-api-${{ steps.extract_profile.outputs.profile }}.war"
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          # Write SSH key with proper line endings
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          chmod 700 ~/.ssh
+          # Add host to known_hosts
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+          # Start SSH agent and add key with passphrase
+          eval $(ssh-agent -s)
+          echo "dorgeles" | ssh-add ~/.ssh/id_ed25519
+          # Export SSH_AUTH_SOCK for subsequent steps
+          echo "SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> $GITHUB_ENV
+          echo "SSH_AGENT_PID=$SSH_AGENT_PID" >> $GITHUB_ENV
+          # Test SSH connection
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
+
+      - name: Deploy to VPS
+        run: |
+          # Method 1: Try with ssh-agent (should work)
+          scp -o StrictHostKeyChecking=no \
+            target/e-flutter-api-${{ steps.extract_profile.outputs.profile }}.war \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/tmp/
+
+          # Move from /tmp to tomcat webapps directory
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+            "sudo mv /tmp/e-flutter-api-${{ steps.extract_profile.outputs.profile }}.war /opt/tomcat/tomcat10/webapps/"
