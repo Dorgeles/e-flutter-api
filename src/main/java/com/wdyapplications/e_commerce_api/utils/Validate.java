@@ -176,19 +176,22 @@ public class Validate {
 	}
 
 	public static <T> Response<T> validateObject(Request<T> request, Response<T> response, FunctionalError functionalError, Locale locale) throws Exception {
+		System.out.println("entrée dans le validateObject");
 		boolean ostate = true;
 		response.setStatus(functionalError.REQUEST_FAIL("", locale));
 		if (request == null) {
+			System.out.println("sortie 1");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("la requete est vide", locale));
 			return response;
 		}
 		if (request.getData() == null) {
+			System.out.println("sortie 2");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("", locale));
 			return response;
 		}
-
+		System.out.println("sortie 3");
 		ostate = false;
 		response.setStatus(null);
 		response.setHasError(ostate);
@@ -196,20 +199,24 @@ public class Validate {
 	}
 
 	public static <T> Response<T> validateList(Request<T> request, Response<T> response, FunctionalError functionalError, Locale locale) throws Exception {
+		System.out.println("entrée dans le validateList");
 		boolean ostate = true;
 		response.setStatus(functionalError.REQUEST_FAIL("", locale));
 		if (request == null) {
+			System.out.println("sortie 1");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("la requete est vide", locale));
 			return response;
 		}
 		if (request.getDatas() == null) {
+			System.out.println("sortie 2");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("", locale));
 			return response;
 		}
 
 		if (request.getDatas().isEmpty()) {
+			System.out.println("sortie 3");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("la liste fournie est vide", locale));
 			return response;

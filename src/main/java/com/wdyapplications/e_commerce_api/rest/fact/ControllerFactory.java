@@ -44,7 +44,7 @@ public class ControllerFactory<DTO> implements IController<DTO> {
     public Response<DTO> create(IBasicBusiness iBasicBusiness, Request<DTO> request, FunctionalityEnum functionalityEnum) {
         Response<DTO> response   = new Response<DTO>();
         String        languageID = (String) requestBasic.getAttribute("CURRENT_LANGUAGE_IDENTIFIER");
-        Locale        locale     = languageID == null ? Locale.FRENCH: new Locale(languageID, "");
+        Locale        locale     = Locale.FRENCH;
         try {
             response = Validate.validateList(request, response, functionalError, locale);
             if (!response.isHasError()) {
@@ -74,7 +74,7 @@ public class ControllerFactory<DTO> implements IController<DTO> {
     public Response<DTO> update(IBasicBusiness iBasicBusiness, Request<DTO> request, FunctionalityEnum functionalityEnum) {
         Response<DTO> response   = new Response<DTO>();
         String        languageID = (String) requestBasic.getAttribute("CURRENT_LANGUAGE_IDENTIFIER");
-        Locale        locale     = languageID == null ? Locale.FRENCH: new Locale(languageID, "");
+        Locale        locale     = Locale.FRENCH;
         try {
             response = Validate.validateList(request, response, functionalError, locale);
             if (!response.isHasError()) {
@@ -104,7 +104,7 @@ public class ControllerFactory<DTO> implements IController<DTO> {
     public Response<DTO> delete(IBasicBusiness iBasicBusiness, Request<DTO> request, FunctionalityEnum functionalityEnum) {
         Response<DTO> response   = new Response<DTO>();
         String        languageID = (String) requestBasic.getAttribute("CURRENT_LANGUAGE_IDENTIFIER");
-        Locale        locale     = languageID == null ? Locale.FRENCH: new Locale(languageID, "");
+        Locale        locale     = Locale.FRENCH;
         try {
             response = Validate.validateList(request, response, functionalError, locale);
             if (!response.isHasError()) {
@@ -134,7 +134,7 @@ public class ControllerFactory<DTO> implements IController<DTO> {
     public Response<DTO> getByCriteria(IBasicBusiness iBasicBusiness, Request<DTO> request, FunctionalityEnum functionalityEnum) {
         Response<DTO> response   = new Response<DTO>();
         String        languageID = (String) requestBasic.getAttribute("CURRENT_LANGUAGE_IDENTIFIER");
-        Locale        locale     = languageID == null ? Locale.FRENCH: new Locale(languageID, "");
+        Locale        locale     =Locale.FRENCH;
         try {
             response = Validate.validateObject(request, response, functionalError, locale);
             if (!response.isHasError()) {
