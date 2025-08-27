@@ -7,31 +7,20 @@
 
 package com.wdyapplications.e_commerce_api.utils;
 
+import com.wdyapplications.e_commerce_api.utils.contract.Request;
+import com.wdyapplications.e_commerce_api.utils.contract.Response;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.apache.commons.lang.NullArgumentException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import lombok.Data;
-import org.mapstruct.ap.shaded.freemarker.template.utility.NullArgumentException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
-
-import com.wdyapplications.e_commerce_api.utils.contract.Request;
-import com.wdyapplications.e_commerce_api.utils.contract.Response;
-
-
-/**
- * Validate
- * 
- * @author Dorgeddy
- *
- */
-
-import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Validate {
@@ -176,22 +165,19 @@ public class Validate {
 	}
 
 	public static <T> Response<T> validateObject(Request<T> request, Response<T> response, FunctionalError functionalError, Locale locale) throws Exception {
-		System.out.println("entrée dans le validateObject");
 		boolean ostate = true;
 		response.setStatus(functionalError.REQUEST_FAIL("", locale));
 		if (request == null) {
-			System.out.println("sortie 1");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("la requete est vide", locale));
 			return response;
 		}
 		if (request.getData() == null) {
-			System.out.println("sortie 2");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("", locale));
 			return response;
 		}
-		System.out.println("sortie 3");
+
 		ostate = false;
 		response.setStatus(null);
 		response.setHasError(ostate);
@@ -199,24 +185,20 @@ public class Validate {
 	}
 
 	public static <T> Response<T> validateList(Request<T> request, Response<T> response, FunctionalError functionalError, Locale locale) throws Exception {
-		System.out.println("entrée dans le validateList");
 		boolean ostate = true;
 		response.setStatus(functionalError.REQUEST_FAIL("", locale));
 		if (request == null) {
-			System.out.println("sortie 1");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("la requete est vide", locale));
 			return response;
 		}
 		if (request.getDatas() == null) {
-			System.out.println("sortie 2");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("", locale));
 			return response;
 		}
 
 		if (request.getDatas().isEmpty()) {
-			System.out.println("sortie 3");
 			response.setHasError(ostate);
 			response.setStatus(functionalError.REQUEST_FAIL("la liste fournie est vide", locale));
 			return response;
@@ -227,9 +209,9 @@ public class Validate {
 		response.setHasError(ostate);
 		return response;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param datas
 	 * @param groupExp
 	 * @param response
@@ -253,7 +235,7 @@ public class Validate {
 		}
 		return isTrue;
 	}
-	
+
 	public static <T> Map<Object, Long> getDuplicateData(List<T> datas, Function<? super T, ? extends Object> groupExp) {
 		if (datas == null) {
 			throw new NullArgumentException("datas");
@@ -263,7 +245,7 @@ public class Validate {
 			return m;
 		};
 		Map<Object, Long> groupItems = datas.stream().collect(Collectors.collectingAndThen(Collectors.groupingBy(groupExp, Collectors.counting()), havingCount));
-		
+
 		return groupItems;
 	}
 }

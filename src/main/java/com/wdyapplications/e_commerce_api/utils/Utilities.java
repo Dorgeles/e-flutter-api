@@ -14,7 +14,6 @@ import com.wdyapplications.e_commerce_api.utils.enums.OperatorEnum;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.LocaleUtils;
-import org.mapstruct.ap.shaded.freemarker.template.utility.NullArgumentException;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang3.text.StrSubstitutor;
 import org.joda.time.format.DateTimeFormat;
