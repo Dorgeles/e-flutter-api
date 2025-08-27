@@ -1,7 +1,7 @@
 
 /*
  * Java dto for entity table users 
- * Created on 2025-08-23 ( Time 06:18:37 )
+ * Created on 2025-08-27 ( Time 18:33:49 )
  * Generator tool : Telosys Tools Generator ( version 3.3.0 )
  * Copyright 2018 Geo. All Rights Reserved.
  */
@@ -30,8 +30,10 @@ import com.wdyapplications.e_commerce_api.utils.dto.base._UsersDto;
 @JsonPropertyOrder(alphabetic = true)
 public class UsersDto extends _UsersDto{
 
-    private String    statusLibelle               ;
-    
+	private String    statusLibelle               ;
+	private String    password               ;
+	private String    oldPassword               ;
+
 	//----------------------------------------------------------------------
     // clone METHOD
     //----------------------------------------------------------------------

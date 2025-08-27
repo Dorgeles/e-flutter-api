@@ -26,6 +26,9 @@ import com.wdyapplications.e_commerce_api.utils.enums.FunctionalityEnum;
 import com.wdyapplications.e_commerce_api.business.*;
 import com.wdyapplications.e_commerce_api.rest.fact.ControllerFactory;
 
+import java.text.ParseException;
+import java.util.Locale;
+
 /**
 Controller for table "users"
  * 
@@ -72,6 +75,20 @@ public class UsersController {
     	// System.out.println("start method /users/getByCriteria");
         Response<UsersDto> response = controllerFactory.getByCriteria(usersBusiness, request, FunctionalityEnum.VIEW_USERS);
 		// System.out.println("end method /users/getByCriteria");
+        return response;
+    }
+    @RequestMapping(value="/login",method=RequestMethod.POST,consumes = {"application/json"},produces={"application/json"})
+    public Response<UsersDto> login(@RequestBody Request<UsersDto> request) throws ParseException {
+        // System.out.println("start method /users/create");
+        Response<UsersDto> response = usersBusiness.login(request, Locale.FRENCH);
+        // System.out.println("end method /users/create");
+        return response;
+    }
+    @RequestMapping(value="/changePassword",method=RequestMethod.POST,consumes = {"application/json"},produces={"application/json"})
+    public Response<UsersDto> changePassword(@RequestBody Request<UsersDto> request) throws ParseException {
+        // System.out.println("start method /users/create");
+        Response<UsersDto> response = usersBusiness.changePassword(request, Locale.FRENCH);
+        // System.out.println("end method /users/create");
         return response;
     }
 }

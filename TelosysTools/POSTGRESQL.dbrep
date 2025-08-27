@@ -296,8 +296,8 @@
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="product_images_product_id_fkey" id="LINK_FK_product_images_product_id_fkey_I" inverseSideOf="LINK_FK_product_images_product_id_fkey_O" javaName="listOfProductImages" javaType="unused" joinTableName="" mappedBy="products" optional="" owningSide="false" sourceTableName="products" targetEntity="ProductImages" targetTableName="product_images" used="true"/>
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="stock_history_product_id_fkey" id="LINK_FK_stock_history_product_id_fkey_I" inverseSideOf="LINK_FK_stock_history_product_id_fkey_O" javaName="listOfStockHistory" javaType="unused" joinTableName="" mappedBy="products" optional="" owningSide="false" sourceTableName="products" targetEntity="StockHistory" targetTableName="stock_history" used="true"/>
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="reviews_product_id_fkey" id="LINK_FK_reviews_product_id_fkey_I" inverseSideOf="LINK_FK_reviews_product_id_fkey_O" javaName="listOfReviews" javaType="unused" joinTableName="" mappedBy="products" optional="" owningSide="false" sourceTableName="products" targetEntity="Reviews" targetTableName="reviews" used="true"/>
-            <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="order_items_product_id_fkey" id="LINK_FK_order_items_product_id_fkey_I" inverseSideOf="LINK_FK_order_items_product_id_fkey_O" javaName="listOfOrderItems" javaType="unused" joinTableName="" mappedBy="products" optional="" owningSide="false" sourceTableName="products" targetEntity="OrderItems" targetTableName="order_items" used="true"/>
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="cart_items_product_id_fkey" id="LINK_FK_cart_items_product_id_fkey_I" inverseSideOf="LINK_FK_cart_items_product_id_fkey_O" javaName="listOfCartItems" javaType="unused" joinTableName="" mappedBy="products" optional="" owningSide="false" sourceTableName="products" targetEntity="CartItems" targetTableName="cart_items" used="true"/>
+            <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="order_items_product_id_fkey" id="LINK_FK_order_items_product_id_fkey_I" inverseSideOf="LINK_FK_order_items_product_id_fkey_O" javaName="listOfOrderItems" javaType="unused" joinTableName="" mappedBy="products" optional="" owningSide="false" sourceTableName="products" targetEntity="OrderItems" targetTableName="order_items" used="true"/>
             <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="products_category_id_fkey" id="LINK_FK_products_category_id_fkey_O" inverseSideOf="" javaName="categories" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="products" targetEntity="Categories" targetTableName="categories" used="true">
                 <joinColumns>
                     <joinColumn insertable="false" name="category_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
@@ -353,14 +353,14 @@
                     <joinColumn insertable="false" name="order_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
                 </joinColumns>
             </link>
-            <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="promotion_usage_user_id_fkey" id="LINK_FK_promotion_usage_user_id_fkey_O" inverseSideOf="" javaName="users" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="promotion_usage" targetEntity="Users" targetTableName="users" used="true">
-                <joinColumns>
-                    <joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
-                </joinColumns>
-            </link>
             <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="promotion_usage_promotion_id_fkey" id="LINK_FK_promotion_usage_promotion_id_fkey_O" inverseSideOf="" javaName="promotions" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="promotion_usage" targetEntity="Promotions" targetTableName="promotions" used="true">
                 <joinColumns>
                     <joinColumn insertable="false" name="promotion_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
+                </joinColumns>
+            </link>
+            <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="promotion_usage_user_id_fkey" id="LINK_FK_promotion_usage_user_id_fkey_O" inverseSideOf="" javaName="users" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="promotion_usage" targetEntity="Users" targetTableName="users" used="true">
+                <joinColumns>
+                    <joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
                 </joinColumns>
             </link>
         </table>
@@ -397,14 +397,14 @@
             <fk name="reviews_user_id_fkey">
                 <fkcol colname="user_id" colref="id" deferrable="7" deleterule="0" sequence="1" tablename="reviews" tableref="users" updaterule="3"/>
             </fk>
-            <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="reviews_user_id_fkey" id="LINK_FK_reviews_user_id_fkey_O" inverseSideOf="" javaName="users" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="reviews" targetEntity="Users" targetTableName="users" used="true">
-                <joinColumns>
-                    <joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
-                </joinColumns>
-            </link>
             <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="reviews_product_id_fkey" id="LINK_FK_reviews_product_id_fkey_O" inverseSideOf="" javaName="products" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="reviews" targetEntity="Products" targetTableName="products" used="true">
                 <joinColumns>
                     <joinColumn insertable="false" name="product_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
+                </joinColumns>
+            </link>
+            <link cardinality="ManyToOne" cascade="" fetch="DEFAULT" foreignKeyName="reviews_user_id_fkey" id="LINK_FK_reviews_user_id_fkey_O" inverseSideOf="" javaName="users" javaType="unused" joinTableName="" mappedBy="" optional="" owningSide="true" sourceTableName="reviews" targetEntity="Users" targetTableName="users" used="true">
+                <joinColumns>
+                    <joinColumn insertable="false" name="user_id" nullable="true" referencedColumnName="id" unique="false" updatable="false"/>
                 </joinColumns>
             </link>
         </table>
@@ -470,7 +470,7 @@
             <column dbComment="" dbDefaultValue="" dbName="last_name" dbNotNull="true" dbPosition="5" dbSize="100" dbTypeName="varchar" inputType="text" javaName="lastName" javaType="java.lang.String" jdbcTypeCode="12" label="Last name" maxLength="100" notEmpty="true" notNull="true" selected="true"/>
             <column dbComment="" dbDefaultValue="" dbName="phone" dbNotNull="false" dbPosition="6" dbSize="20" dbTypeName="varchar" inputType="text" javaName="phone" javaType="java.lang.String" jdbcTypeCode="12" label="Phone" maxLength="20" notNull="false" selected="true"/>
             <column dbComment="" dbDefaultValue="" dbName="avatar_url" dbNotNull="false" dbPosition="7" dbSize="500" dbTypeName="varchar" inputType="text" javaName="avatarUrl" javaType="java.lang.String" jdbcTypeCode="12" label="Avatar url" maxLength="500" notNull="false" selected="true"/>
-            <column dbComment="" dbDefaultValue="'CLIENT'::user_role" dbName="role" dbNotNull="false" dbPosition="8" dbSize="2147483647" dbTypeName="user_role" inputType="text" javaName="role" javaType="java.lang.String" jdbcTypeCode="12" label="Role" maxLength="2147483647" notNull="false" selected="true"/>
+            <column dbComment="" dbDefaultValue="" dbName="role" dbNotNull="false" dbPosition="8" dbSize="2147483647" dbTypeName="varchar" inputType="text" javaName="role" javaType="java.lang.String" jdbcTypeCode="12" label="Role" maxLength="100" notNull="false" selected="true"/>
             <column dateType="DT" dbComment="" dbDefaultValue="CURRENT_TIMESTAMP" dbName="created_at" dbNotNull="false" dbPosition="9" dbSize="29" dbTypeName="timestamp" inputType="" javaName="createdAt" javaType="java.util.Date" jdbcTypeCode="93" label="Created at" notNull="false" selected="true"/>
             <column dateType="DT" dbComment="" dbDefaultValue="CURRENT_TIMESTAMP" dbName="updated_at" dbNotNull="false" dbPosition="10" dbSize="29" dbTypeName="timestamp" inputType="" javaName="updatedAt" javaType="java.util.Date" jdbcTypeCode="93" label="Updated at" notNull="false" selected="true"/>
             <column dateType="DT" dbComment="" dbDefaultValue="" dbName="last_login" dbNotNull="false" dbPosition="11" dbSize="29" dbTypeName="timestamp" inputType="" javaName="lastLogin" javaType="java.util.Date" jdbcTypeCode="93" label="Last login" notNull="false" selected="true"/>
@@ -488,8 +488,8 @@
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="reviews_user_id_fkey" id="LINK_FK_reviews_user_id_fkey_I" inverseSideOf="LINK_FK_reviews_user_id_fkey_O" javaName="listOfReviews" javaType="unused" joinTableName="" mappedBy="users" optional="" owningSide="false" sourceTableName="users" targetEntity="Reviews" targetTableName="reviews" used="true"/>
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="promotion_usage_user_id_fkey" id="LINK_FK_promotion_usage_user_id_fkey_I" inverseSideOf="LINK_FK_promotion_usage_user_id_fkey_O" javaName="listOfPromotionUsage" javaType="unused" joinTableName="" mappedBy="users" optional="" owningSide="false" sourceTableName="users" targetEntity="PromotionUsage" targetTableName="promotion_usage" used="true"/>
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="order_items_seller_id_fkey" id="LINK_FK_order_items_seller_id_fkey_I" inverseSideOf="LINK_FK_order_items_seller_id_fkey_O" javaName="listOfOrderItems" javaType="unused" joinTableName="" mappedBy="users" optional="" owningSide="false" sourceTableName="users" targetEntity="OrderItems" targetTableName="order_items" used="true"/>
-            <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="orders_customer_id_fkey" id="LINK_FK_orders_customer_id_fkey_I" inverseSideOf="LINK_FK_orders_customer_id_fkey_O" javaName="listOfOrders" javaType="unused" joinTableName="" mappedBy="users" optional="" owningSide="false" sourceTableName="users" targetEntity="Orders" targetTableName="orders" used="true"/>
             <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="carts_user_id_fkey" id="LINK_FK_carts_user_id_fkey_I" inverseSideOf="LINK_FK_carts_user_id_fkey_O" javaName="listOfCarts" javaType="unused" joinTableName="" mappedBy="users" optional="" owningSide="false" sourceTableName="users" targetEntity="Carts" targetTableName="carts" used="true"/>
+            <link cardinality="OneToMany" cascade="" fetch="DEFAULT" foreignKeyName="orders_customer_id_fkey" id="LINK_FK_orders_customer_id_fkey_I" inverseSideOf="LINK_FK_orders_customer_id_fkey_O" javaName="listOfOrders" javaType="unused" joinTableName="" mappedBy="users" optional="" owningSide="false" sourceTableName="users" targetEntity="Orders" targetTableName="orders" used="true"/>
         </table>
     </tableList>
 </root>
