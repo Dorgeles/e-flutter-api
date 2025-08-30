@@ -200,10 +200,11 @@ public interface _ConversationsRepository {
         req += othersReq;
 
         //order
-        if(Direction.fromOptionalString(dto.getOrderDirection()).orElse(null) != null && Utilities.notBlank(dto.getOrderField())) {
-            req += " order by e."+dto.getOrderField()+" "+dto.getOrderDirection();
-        }
-        else {
+        if (Direction.fromOptionalString(dto.getOrderDirection()).orElse(null) != null && Utilities.notBlank(dto.getOrderField())) {
+            req += " group by  e.id";
+            req += " order by e." + dto.getOrderField() + " " + dto.getOrderDirection();
+        } else {
+            req += " group by  e.id";
             req += " order by  e.id desc";
         }
         return req;
